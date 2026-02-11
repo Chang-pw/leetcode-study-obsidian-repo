@@ -1,0 +1,31 @@
+{
+  "name": "leetcode-obsidian-repo",
+  "version": "1.0.0",
+  "description": "CLI tool to import LeetCode problems into an Obsidian-compatible Markdown vault",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "leetcode-vault": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "leetcode",
+    "obsidian",
+    "markdown",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.0.0",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "fast-check": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
