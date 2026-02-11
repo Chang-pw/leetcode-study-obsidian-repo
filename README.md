@@ -14,7 +14,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/your-username/leetcode-obsidian-repo.git
+git clone https://github.com/Chang-pw/leetcode-study-obsidian-repo.git
 cd leetcode-obsidian-repo
 npm install
 npm run build
