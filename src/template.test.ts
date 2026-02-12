@@ -9,6 +9,7 @@ const sampleProblem: ProblemMetadata = {
   difficulty: 'easy',
   tags: ['array', 'hash-table'],
   date: '2024-01-01',
+  url: 'https://leetcode.cn/problems/two-sum/',
 };
 
 const sampleContent = 'Given an array of integers nums and an integer target...';

@@ -17,6 +17,8 @@ export interface ProblemMetadata {
   tags: string[];
   /** 导入日期，格式 YYYY-MM-DD */
   date: string;
+  /** LeetCode 题目链接 */
+  url: string;
 }
 
 /** LeetCode GraphQL API 响应中的题目数据 */

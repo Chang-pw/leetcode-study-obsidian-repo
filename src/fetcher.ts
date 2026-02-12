@@ -44,6 +44,7 @@ export function mapToProblemMetadata(problem: LeetCodeProblem): ProblemMetadata 
     difficulty: problem.difficulty.toLowerCase() as ProblemMetadata['difficulty'],
     tags,
     date: new Date().toISOString().slice(0, 10),
+    url: `https://leetcode.cn/problems/${problem.titleSlug}/`,
   };
 }
 

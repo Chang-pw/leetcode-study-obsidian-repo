@@ -9,6 +9,7 @@ const sampleMetadata: ProblemMetadata = {
   difficulty: 'easy',
   tags: ['array', 'hash-table'],
   date: '2024-01-15',
+  url: 'https://leetcode.cn/problems/two-sum/',
 };
 
 describe('serializeFrontmatter', () => {
@@ -78,6 +79,7 @@ describe('round-trip', () => {
       title: "3Sum Closest (Two Pointers)",
       slug: '3sum-closest',
       id: 16,
+      url: 'https://leetcode.cn/problems/3sum-closest/',
     };
     const parsed = parseFrontmatter(serializeFrontmatter(meta));
     expect(parsed).toEqual(meta);

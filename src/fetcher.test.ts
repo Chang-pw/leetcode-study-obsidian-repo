@@ -69,6 +69,11 @@ describe('mapToProblemMetadata', () => {
     const result = mapToProblemMetadata(sampleProblem);
     expect(result.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   });
+
+  it('should generate leetcode.cn url from slug', () => {
+    const result = mapToProblemMetadata(sampleProblem);
+    expect(result.url).toBe('https://leetcode.cn/problems/two-sum/');
+  });
 });
 
 describe('fetchProblemBySlug', () => {

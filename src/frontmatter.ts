@@ -43,5 +43,6 @@ export function parseFrontmatter(content: string): ProblemMetadata {
     difficulty,
     tags: raw.tags as string[],
     date: raw.date,
+    url: typeof raw.url === 'string' ? raw.url : `https://leetcode.cn/problems/${raw.slug}/`,
   };
 }

@@ -36,9 +36,9 @@ describe('generateIndexes', () => {
 
   it('should generate by-difficulty.md with correct grouping', async () => {
     const problems: ProblemMetadata[] = [
-      { id: 1, title: '两数之和', slug: 'two-sum', difficulty: 'easy', tags: ['数组', '哈希表'], date: '2024-01-01' },
-      { id: 15, title: '三数之和', slug: '3sum', difficulty: 'medium', tags: ['数组', '双指针'], date: '2024-01-02' },
-      { id: 42, title: '接雨水', slug: 'trapping-rain-water', difficulty: 'hard', tags: ['栈', '动态规划'], date: '2024-01-03' },
+      { id: 1, title: '两数之和', slug: 'two-sum', difficulty: 'easy', tags: ['数组', '哈希表'], date: '2024-01-01', url: 'https://leetcode.cn/problems/two-sum/' },
+      { id: 15, title: '三数之和', slug: '3sum', difficulty: 'medium', tags: ['数组', '双指针'], date: '2024-01-02', url: 'https://leetcode.cn/problems/3sum/' },
+      { id: 42, title: '接雨水', slug: 'trapping-rain-water', difficulty: 'hard', tags: ['栈', '动态规划'], date: '2024-01-03', url: 'https://leetcode.cn/problems/trapping-rain-water/' },
     ];
     for (const p of problems) await createProblemFile(problemsDir, p);
 
@@ -55,8 +55,8 @@ describe('generateIndexes', () => {
 
   it('should generate by-category.md with correct grouping', async () => {
     const problems: ProblemMetadata[] = [
-      { id: 1, title: '两数之和', slug: 'two-sum', difficulty: 'easy', tags: ['数组', '哈希表'], date: '2024-01-01' },
-      { id: 15, title: '三数之和', slug: '3sum', difficulty: 'medium', tags: ['数组', '双指针'], date: '2024-01-02' },
+      { id: 1, title: '两数之和', slug: 'two-sum', difficulty: 'easy', tags: ['数组', '哈希表'], date: '2024-01-01', url: 'https://leetcode.cn/problems/two-sum/' },
+      { id: 15, title: '三数之和', slug: '3sum', difficulty: 'medium', tags: ['数组', '双指针'], date: '2024-01-02', url: 'https://leetcode.cn/problems/3sum/' },
     ];
     for (const p of problems) await createProblemFile(problemsDir, p);
 
@@ -78,8 +78,8 @@ describe('generateIndexes', () => {
 
   it('should generate hot-100.md index', async () => {
     const problems: ProblemMetadata[] = [
-      { id: 1, title: '两数之和', slug: 'two-sum', difficulty: 'easy', tags: ['数组', 'hot-100'], date: '2024-01-01' },
-      { id: 9999, title: '非热门题', slug: 'not-hot', difficulty: 'easy', tags: ['数组'], date: '2024-01-02' },
+      { id: 1, title: '两数之和', slug: 'two-sum', difficulty: 'easy', tags: ['数组', 'hot-100'], date: '2024-01-01', url: 'https://leetcode.cn/problems/two-sum/' },
+      { id: 9999, title: '非热门题', slug: 'not-hot', difficulty: 'easy', tags: ['数组'], date: '2024-01-02', url: 'https://leetcode.cn/problems/not-hot/' },
     ];
     for (const p of problems) await createProblemFile(problemsDir, p);
 
