@@ -39,18 +39,20 @@ tags: [${name}]
 
 <h2 align="center">
   <em>核心概念</em>
-
-
+</h2>
+\n --- \n
 <h2 align="center">
   <em>解题套路 / 模板代码</em>
-
+</h2>
+\n --- \n
 \`\`\`python
 
 \`\`\`
 
 <h2 align="center">
   <em>相关题目</em>
-
+</h2>
+\n --- \n
 - [[]] - 
 - [[]] - 
 - [[]] - 

@@ -17,11 +17,11 @@ export function renderProblemFile(problem: ProblemMetadata, content: string): st
 
   const description = `<h2 align="center">
   <em>📌 题目描述</em>
-</h2>\n\n${content}`;
+</h2>\n\n${content}\n --- \n`;
 
   const solution = [
     '<h2 align="center"><em>🚀 解答</em></h2>',
-    '',
+    '\n --- \n',
     '### 解法一',
     '',
     '```python',
@@ -31,7 +31,7 @@ export function renderProblemFile(problem: ProblemMetadata, content: string): st
 
   const notes = [
     '<h2 align="center"><em>📚 笔记</em></h2>',
-    '',
+    '\n --- \n',
     '- **时间复杂度**：',
     '- **空间复杂度**：',
     '- **关键思路**：',
