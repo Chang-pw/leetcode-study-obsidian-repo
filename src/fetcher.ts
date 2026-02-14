@@ -117,18 +117,17 @@ export async function fetchProblemBySlug(titleSlug: string): Promise<FetchResult
 
 /**
  * 通过题目编号获取题目（先查 slug 再获取详情）
- * leetcode.cn 不直接支持按编号查询，需要先通过专用接口获取 slug
+ * leetcode.cn 不直接支持按编号查询，需要先通过搜索接口获取 slug
  */
 export async function fetchProblem(questionId: string): Promise<FetchResult> {
   try {
-    // leetcode.cn 支持通过 questionFrontendId 查询
     const query = `
-      query problemsetQuestionList($filters: QuestionListFilterInput) {
-        problemsetQuestionList: questionList(
+      query problemsetQuestionList {
+        problemsetQuestionList(
           categorySlug: ""
           limit: 1
           skip: 0
-          filters: $filters
+          filters: { searchKeywords: "${questionId}" }
         ) {
           questions {
             titleSlug
@@ -140,10 +139,7 @@ export async function fetchProblem(questionId: string): Promise<FetchResult> {
     const response = await fetch(LEETCODE_GRAPHQL_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        query,
-        variables: { filters: { searchKeywords: questionId } },
-      }),
+      body: JSON.stringify({ query }),
     });
 
     if (!response.ok) {
